@@ -65,6 +65,7 @@ cd ../mobile && yarn test
 docker stack deploy -c deployment/docker-compose.yml dex-platform
 
 ## Architecture
+`
 DEX-Hec-layer2/
 │
 ├── smart-contracts/
@@ -125,7 +126,7 @@ DEX-Hec-layer2/
 │   └── setup_environment.sh
 │
 └── README.md
-
+`
 This structure organizes the code into distinct modules:
 
 Smart Contracts: Handles on-chain logic for the DEX.
