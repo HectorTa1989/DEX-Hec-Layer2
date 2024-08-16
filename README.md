@@ -11,6 +11,23 @@ A decentralized exchange platform built on BNB Chain with Layer 2 integration us
 - `deployment/`: Deployment configurations
 - `scripts/`: Utility scripts
 
+- This structure organizes the code into distinct modules:
+
+Smart Contracts: Handles on-chain logic for the DEX.
+Backend: Provides API endpoints and integrates with the order matching engine.
+Frontend: Web interface for users to interact with the DEX.
+Mobile: Cross-platform mobile app for on-the-go trading.
+Order Matching Engine: High-performance C++ engine for order matching.
+
+These modules interact as follows:
+
+The frontend and mobile app communicate with the backend via RESTful API calls and WebSocket connections.
+The backend interacts with the smart contracts through ethers.js to place on-chain orders.
+The backend uses the C++ order matching engine as a native addon for high-performance order matching.
+The smart contracts emit events that the backend listens to for order execution and other on-chain activities.
+
+This structure allows for separation of concerns, making the codebase modular and easier to maintain. Each component can be developed, tested, and scaled independently while still working together as a cohesive system.
+
 ## Prerequisites
 
 - Node.js (v14+)
@@ -63,25 +80,6 @@ cd ../mobile && yarn test
 2. Update the `deployment/docker-compose.yml` with production settings.
 3. Deploy using Docker Swarm:
 docker stack deploy -c deployment/docker-compose.yml dex-platform
-
-## Architecture
-
-This structure organizes the code into distinct modules:
-
-Smart Contracts: Handles on-chain logic for the DEX.
-Backend: Provides API endpoints and integrates with the order matching engine.
-Frontend: Web interface for users to interact with the DEX.
-Mobile: Cross-platform mobile app for on-the-go trading.
-Order Matching Engine: High-performance C++ engine for order matching.
-
-These modules interact as follows:
-
-The frontend and mobile app communicate with the backend via RESTful API calls and WebSocket connections.
-The backend interacts with the smart contracts through ethers.js to place on-chain orders.
-The backend uses the C++ order matching engine as a native addon for high-performance order matching.
-The smart contracts emit events that the backend listens to for order execution and other on-chain activities.
-
-This structure allows for separation of concerns, making the codebase modular and easier to maintain. Each component can be developed, tested, and scaled independently while still working together as a cohesive system.
 
 ## Contributing
 
