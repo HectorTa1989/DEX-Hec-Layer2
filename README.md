@@ -13,11 +13,11 @@ A decentralized exchange platform built on BNB Chain with Layer 2 integration us
 
 - This structure organizes the code into distinct modules:
 
-Smart Contracts: Handles on-chain logic for the DEX.
-Backend: Provides API endpoints and integrates with the order matching engine.
-Frontend: Web interface for users to interact with the DEX.
-Mobile: Cross-platform mobile app for on-the-go trading.
-Order Matching Engine: High-performance C++ engine for order matching.
+* Smart Contracts: Handles on-chain logic for the DEX.
+* Backend: Provides API endpoints and integrates with the order matching engine.
+* Frontend: Web interface for users to interact with the DEX.
+* Mobile: Cross-platform mobile app for on-the-go trading.
+* Order Matching Engine: High-performance C++ engine for order matching.
 
 These modules interact as follows:
 
