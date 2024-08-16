@@ -65,68 +65,7 @@ cd ../mobile && yarn test
 docker stack deploy -c deployment/docker-compose.yml dex-platform
 
 ## Architecture
-`
-DEX-Hec-layer2/
-│
-├── smart-contracts/
-│   ├── contracts/
-│   │   └── DEX.sol
-│   ├── migrations/
-│   ├── test/
-│   └── truffle-config.js
-│
-├── backend/
-│   ├── src/
-│   │   ├── app.js
-│   │   ├── routes/
-│   │   ├── controllers/
-│   │   ├── models/
-│   │   └── utils/
-│   ├── test/
-│   └── package.json
-│
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   ├── utils/
-│   │   ├── App.js
-│   │   └── index.js
-│   └── package.json
-│
-├── mobile/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── screens/
-│   │   ├── services/
-│   │   ├── utils/
-│   │   └── App.js
-│   ├── ios/
-│   ├── android/
-│   └── package.json
-│
-├── order-matching-engine/
-│   ├── src/
-│   │   └── order_matching_engine.cpp
-│   ├── include/
-│   │   └── order_matching_engine.h
-│   ├── build/
-│   └── CMakeLists.txt
-│
-├── deployment/
-│   ├── docker-compose.yml
-│   ├── Dockerfile.backend
-│   ├── Dockerfile.frontend
-│   └── nginx.conf
-│
-├── scripts/
-│   ├── deploy_contracts.js
-│   └── setup_environment.sh
-│
-└── README.md
-`
+
 This structure organizes the code into distinct modules:
 
 Smart Contracts: Handles on-chain logic for the DEX.
